@@ -5,9 +5,15 @@ import { IoMdClose } from "react-icons/io";
 import Image from 'next/image';
 import logo from '@public/Logo/purepalatelogo.svg'
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 const Navbar = () => {
     const [menuClick,setMenuClick] = useState(false);
-  const dropdownRef = useRef(null)
+  const dropdownRef = useRef(null);
+  const path = usePathname();
+  const background = (path==="/")? "#F7F5F1":"#F7F5F1";
+  
+
+  
 
     const handleMenuOpen = () =>{
         setMenuClick(!menuClick);
@@ -30,7 +36,7 @@ const Navbar = () => {
     }, [menuClick])
 
   return (
-    <div className='bg-inherit p-1 px-4 flex items-center justify-center '>
+<div className={`${path === '/' ? 'bg-[#F7F5F1]' : 'bg-[#F7F5F1]' } p-1 px-4 flex items-center justify-center`}>
         <div className='w-[100%] flex justify-between items-center gap-2 md:w-[90%] '>
             <Link href='/' className=''>
                 <Image src={logo} alt='logo' className='w-auto h-11'/>

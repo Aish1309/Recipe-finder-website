@@ -51,23 +51,23 @@ export default function Page({ params }) {
         }
     }, [slug]); 
 
-    if (loading) {
-        return <div className='p-70 bg-slate-400 text-white'>Loading recipes for {slug}...</div>;
-    }
+    // if (loading) {
+    //     return <div className='p-70 bg-slate-400 text-white'>Loading recipes for {slug}...</div>;
+    // }
 
-    if (error) {
-        return <div className='p-70 bg-red-600 text-white'>Error: {error}</div>;
-    }
+    // if (error) {
+    //     return <div className='p-70 bg-red-600 text-white'>Error: {error}</div>;
+    // }
 
-    if (recipes.length === 0) {
-        return <div className='p-70 bg-gray-500 text-white'>No recipes found for "{slug}".</div>;
-    }
+    // if (recipes.length === 0) {
+    //     return <div className='p-70 bg-gray-500 text-white'>No recipes found for "{slug}".</div>;
+    // }
 
     return (
-  <div className='bg-mainbg py-12 flex items-center justify-center md:py-16 lg:py-20'>
+  <div className='bg-mainbg min-h-screen py-12 flex  justify-center md:py-16 lg:py-20'>
       <div className='w-[90%] flex flex-col  gap-6 md:w-[90%] lg:w-[80%] lg:gap-9 '>
         <div className='w-[100%] flex justify-between items-center gap-5'>
-          <h2 className='font-figtree text-lg sm:text-xl md:text-2xl lg:text-[26px] text-heading font-semibold '>{slug}</h2>
+          <h2 className='font-figtree text-lg sm:text-xl md:text-2xl lg:text-[26px] text-heading font-semibold '>{slug.charAt(0).toUpperCase()}{slug.substring(1)}</h2>
           {/* <p className='font-figtree text-xs sm:text-sm  text-hoverPrimary font-medium '>view all</p> */}
         </div>
 
