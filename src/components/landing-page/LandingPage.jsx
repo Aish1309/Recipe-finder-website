@@ -4,6 +4,7 @@ import CuisineCategorySection from './CuisineCategorySection'
 import PopularRecipeSection from './PopularRecipeSection'
 import DessertSection from './DessertSection'
 import MinuteMeals from './MinuteMeals'
+import CtaSection from './CtaSection'
 const LandingPage = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const LandingPage = () => {
         <PopularRecipeSection/>
         <DessertSection/>
         <MinuteMeals/>
+        {/* <CtaSection/> */}
     </div>
   )
 }

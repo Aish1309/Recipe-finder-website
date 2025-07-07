@@ -15,12 +15,11 @@ const MinuteMeals = () => {
     then(res=>res.json()).
     then(data=>setRecipes(data))
   })
-  console.log(recipes);
   return (
     <div className='bg-otherbg py-12 flex items-center justify-center md:py-16 lg:py-20'>
           <div className='w-[90%] flex flex-col  gap-6 md:w-[90%] lg:w-[80%] lg:gap-9 '>
             <div className='w-[100%] flex justify-between items-center gap-5'>
-              <h2 className='font-figtree text-lg sm:text-xl md:text-2xl lg:text-[26px] text-heading font-semibold '>Popular Recipes</h2>
+              <h2 className='font-figtree text-lg sm:text-xl md:text-2xl lg:text-[26px] xl:text-[30px] text-heading font-semibold '>Popular Recipes</h2>
             </div>
     
             <div className='grid grid-cols-1 min-[450px]:grid-cols-2 lg:grid-cols-3 gap-4   '>

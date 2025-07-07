@@ -4,7 +4,7 @@ import { RiMenu3Line } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
 import Image from 'next/image';
 import logo from '@public/Logo/purepalatelogo.svg'
-
+import Link from 'next/link';
 const Navbar = () => {
     const [menuClick,setMenuClick] = useState(false);
   const dropdownRef = useRef(null)
@@ -30,11 +30,11 @@ const Navbar = () => {
     }, [menuClick])
 
   return (
-    <div className='bg-mainbg p-1 px-4 flex items-center justify-center'>
+    <div className='bg-inherit p-1 px-4 flex items-center justify-center '>
         <div className='w-[100%] flex justify-between items-center gap-2 md:w-[90%] '>
-            <div className=''>
+            <Link href='/' className=''>
                 <Image src={logo} alt='logo' className='w-auto h-11'/>
-            </div>
+            </Link>
 
             <div className='hidden md:flex justify-between items-center'>
             <div className='font-figtree flex gap-5 text-md text-neutral-800'>
